@@ -10,15 +10,10 @@
 .navbar{
     background:#E74100;
     height: 50px;
+    width: 100%;
     font-size: 1.2rem;
-
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 999;   
-    */
+    position: fixed;
+    z-index: 10;
 }
 
 
@@ -28,12 +23,6 @@
     justify-content: left;
     height: 50px;
     padding: 0px 20px;
-    /*
-    z-index: 1;   IDK if this does anything 
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    */
 
 }
 
@@ -64,21 +53,6 @@
     list-style: none;
     text-align: center;
 }
-
-/* Never used?
-.navbar__item{
-    height: 80px;
-}
-.navbar__links{
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding:0 1rem;
-    height: 100%;
-}
-*/
 
 .navbar__btn{
     display: flex;
@@ -201,123 +175,76 @@
 
 
 /* HERO SECTION CSS*/
-.main{
-    background-color: #a4cae1;
+.background {
+    background-color: #412442;
 }
 
+.main {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
 
-.main__container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.main__container {
+    display: flex;
     align-items: center;
-    justify-self: center;
+    justify-content: center;
     margin: 0 auto;
-    height: 90vh;
-    background-color: #a4cae1;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    padding: 0 50px;
+    border: 2px groove white;
+    border-radius: 10px;
+    height: 30%;
+    width: 1100px;
+    background-color: #B10000;
+    padding: 20px 50px;
+    gap: 20px;
+    transition: background-color 0.1s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-.main__content h1{
-    font-size: 4rem;
-    background-color: #fff;
-    /* background-image: linear-gradient(to top, #fff 0%, #13294b 100%); */
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+.main__container:hover {
+    /* background-color: #ff3333; /* Change the background color on hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Add a glowing effect */
 }
 
-.main__content h2{
-    font-size: 4rem;
-    background-color: #ff1877;
-    background-image: linear-gradient(to top, #b721ff 0%, #21f4fd 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
-
-.main__content p{
-    margin-top: 1rem;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #fff;
-}
-
-
-.main__btn{
-    font-size: 1rem;
-    background-image: linear-gradient(to top, #6be9ff, #5154fe 100%);
-    padding: 14px 32px;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    margin-top: 2rem;
-    cursor: pointer;
+.main__content {
+    text-align: center;
+    flex: 1;
     position: relative;
-    transition: all 0.35s;
-    outline: none;
 }
 
-.main__btn a{
-    position: relative;
-    z-index: 2;
+.main__content h1 {
+    font-size: 4rem;
     color: #fff;
-    text-decoration: none;
+    margin: 0;
 }
 
-.main__btn:after{
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
+.main__content p {
+    font-size: 1.5rem; /* Adjusted the font size to better match the design */
+    color: #fff;
+    margin: 0;
+    position: relative;
+    top: -20px; /* Adjust the top value to fine-tune the vertical alignment */
+}
+
+.main__img--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.main__img--container img {
+    width: auto;
     height: 100%;
-    background: #4837ff;
-    transition: all .35s;
-    border-radius: 4px;
+    margin-left: -20px; /* Adjust the margin to center the image on the face */
 }
 
-.main__btn:hover{
-    color: #fff;
-}
-
-.main__btn:hover:after{
-    width: 100%
-}
-
-.main__img--container{
-    margin: 1rem;
-    height: 600px;
-    width: 750px;
-    border-radius: 20px;
-    background-image: /*linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0), 
-        rgba(17,17,17,0.6)
-      ), */ url('/images/siddhant.png');
-    background-size: cover;
-    position: relative;
-    color: #fff;
-}
-
-.main__img--container:hover{
-    transform: scale(1.075);
-    transition: .12s ease-in;
-    cursor: pointer;
-}
-
-#main_img{
-    height: 80%;
-    width: 80%;
-}
 
 /* Mobile Responsive */
+/*
 @media screen and (max-width: 768px) {
     .main__container{
         display: grid;
@@ -362,131 +289,223 @@
         margin: 2.5rem 0;
     }
 }
+*/
 
+/* ABOUT SECTION */
+.about{
 
-/* LANDING PAGE DESCRIPTION */
-.description_container{
-    background: #e8ded1;
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    margin: 0 auto;
-    height: 20vh;
-    background-color: #a4cae1;
-    z-index: 1;
-    width: 100%;
-    padding: 0 50px;
 }
 
-.description_container p{
-    /*margin-top: 1rem;*/
-    font-size: 1.5rem;
-    font-weight: 700;
+.about h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 30%;
+    width: 1100px;
+    padding: 20px 50px;
+    color: #fff;
+}
+
+.description__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px groove white;
+    border-radius: 10px;
+    height: 30%;
+    width: 1100px;
+    background-color: #B10000;
+    padding: 20px 50px;
+    gap: 20px;
+    transition: background-color 0.1s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.description__container:hover {
+    /* background-color: #ff3333; /* Change the background color on hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Add a glowing effect */
+}
+
+.about p{
     color: #fff;
 }
 
 
-/* SERRVICES SECTION CSS */
-.services{
-    background: #a4cae1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 65vh;
+/* TIMELINE SECTION */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 90%;
+    max-width: 800px;
 }
 
-.services__container{
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: #ffffff;
+}
+
+.timeline-item {
+    position: relative;
+    width: calc(50% - 20px);
+    padding: 20px;
+    background: #b10000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    background: #b10000;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item.right::before {
+    right: auto;
+    left: -8px;
+}
+
+.timeline-content {
+    position: relative;
+    padding: 20px;
+}
+
+.timeline-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+
+/* PROJECTS SECTION */
+.project__title {
     display: flex;
+    align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    height: 30%;
+    width: 1100px;
+    padding: 20px 50px;
+    padding-top: 100px;
+    color: #fff;
+}
+
+.projects__spacer{
+    padding-bottom: 200px;
+}
+
+.projects {
+    width: 80%;
+    max-width: 1000px;
+    background-color: #282c34;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.project__container {
+    min-width: 960px;
+    padding: 20px;
+    border: 1px solid #ff79c6;
+    border-radius: 10px;
+    background-color: #282c34;
+}
+
+.project__container a {
+    color: #ff79c6;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.technology__menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
-.services__card{
-    margin: 1rem;
-    height: 525px;
-    width: 400px;
-    border-radius: 4px;
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0), 
-        rgba(17,17,17,0.6)
-      ), url('/images/rock.png');
-    background-size: cover;
-    position: relative;
-    color: #fff;
+.technology__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #44475a;
+    border-radius: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    max-height: 80px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid #888;
+    margin: 3px;
+    padding-top: 5px;
+    justify-content: center;
 }
 
-.services__card:nth-child(2){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0), 
-        rgba(17,17,17,0.6)
-      ), url('/images/coolme.png');
+.technology__image img {
+    width: 40px;
+    height: 40px;
 }
 
-.services__card:nth-child(3){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0), 
-        rgba(17,17,17,0.6)
-      ), url('/images/water.png');
+.technology__name {
+    margin-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: white;
 }
 
-.services h2{
-    position: absolute;
-    top: 350px;
-    left: 30px;
-}
-
-.services__card h1{
-    position: absolute;
-    top: 400px;
-    left: 30px;
-}
-
-.services__card button{
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background: #00ffc8;
-    position: absolute;
-    top: 440px;
-    left: 30px;
+p {
     font-size: 1rem;
-    cursor: pointer;
+    line-height: 1.5;
+    color: #f8f8f2;
+    margin-top: 20px;
 }
 
-.services__card:hover{
-    transform: scale(1.075);
-    transition: .12s ease-in;
-    cursor: pointer;
-}
 
-@media screen and (max-width: 960px) {
-    .services{
-        height: 1600px
-    }
-    .services h1{
-        font-size: 2rem;
-        margin-top: 12rem;
-    }
-}
 
-@media screen and (max-width: 480px) {
-    .services{
-        height: 1400px;
-    }
 
-    .services h1{
-        font-size: 1.2rem;
-    }
 
-    .services__card{
-        width: 300px;
-    }
-}
+
+
 
 /* FOOTER CSS */
 .footer__container{
