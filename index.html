@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
     <body>
         <!-- NAVBAR SECTION -->
@@ -24,29 +25,28 @@
                 </div>
                 <ul class="navbar__menu">
                     <li class="navbar__btn">
-                        <a href="/about.html" class="button">
+                        <a href="#about" class="button">
                         about
                         </a>
                     </li>
                     <li class="navbar__btn">
-                        <a href="/experience.html" class="button">
+                        <a href="#experiences" class="button">
                         experience
                         </a>
                     </li>
                     <li class="navbar__btn">
-                        <a href="/projects.html" class="button">
+                        <a href="#projects" class="button">
                         projects
                         </a>
                     </li>
                     <li class="navbar__btn">
-                        <a href="/contact.html" class="button">
+                        <a href="#contact" class="button">
                         contact
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
-
 
         <div class="background">
 
@@ -64,7 +64,7 @@
             </div>
 
             <!-- About -->
-            <div class="about">
+            <div class="about" id="about">
                 <h1>ABOUT</h1>
                 <div class="description__container">
                     <p> My name is Siddhant (Sid) Borkar and I’m a sophomore at the University of 
@@ -75,7 +75,6 @@
                     </p>
                 </div>
             </div>
-
 
             <!-- Timeline -->
             <div class="timeline">
@@ -112,10 +111,10 @@
                     </div>
                 </div>
             </div>
-
+            
 
             <!-- Projects -->
-            <div class="project__title">
+            <div class="project__title" id="projects">
                 <h1>PROJECTS</h1>
             </div>
 
@@ -149,8 +148,8 @@
                     <a href="https://youtu.be/Jj0rMp5KKd4"> Country Clever </a>
                     <ul class="technology__menu">
                         <li class="technology__container">
-                            <div class="technology__image"><img src="images/Android_Studio_Icon_3.6.svg.png" alt="andriod studio"/></div>
-                            <div class="technology__name">andriod studio</div>
+                            <div class="technology__image"><img src="images/Android_Studio_Icon_3.6.svg.png" alt="android studio"/></div>
+                            <div class="technology__name">android studio</div>
                         </li>
                         <li class="technology__container">
                             <div class="technology__image"><img src="images/java-logo-svg-vector.svg" alt="java"/></div>
@@ -179,14 +178,26 @@
                         </li>
                     </ul>
                     <p>
-                        My final project for COMP 110, where we build a terminal replica of Wordle. Simple and sleek
+                        My final project for COMP 110, where we build a terminal replica of Wordle. Simple and sleek.
                     </p>
                 </div>
             </div>
-
-
         </div>
 
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer__container">
+                <div class="contact">
+                    <ul class="contact__container">
+                        <!-- Added Icons -->
+                        <li><a href="https://github.com/SiddhantBorkar04" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/siddhant-borkar-854449219/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="mailto:siddhant.borkar4@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                <p class="website__rights">© SIDDHANT BORKAR 2024. All rights reserved.</p>
+            </div>
+        </div>
 
         <script src="app.js"></script>
     </body>
